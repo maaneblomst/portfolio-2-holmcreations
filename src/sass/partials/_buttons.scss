@@ -1,0 +1,23 @@
+/* CTA buttons */
+.cta {
+  background-image: linear-gradient(
+    to right,
+    #9d228a 0%,
+    #d62678 20%,
+    #eb7099 43%,
+    #f8a7a7 100%
+  );
+  border-radius: 12px;
+  transition: 0.6s;
+  background-size: 200% auto;
+}
+.cta:hover {
+  background-position: right center;
+  cursor: pointer;
+}
+
+a i:hover {
+  color: #eb7099;
+  text-shadow: 0 0 20px #eb7099;
+  transition: 0.6s;
+}

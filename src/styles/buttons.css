@@ -1,0 +1,20 @@
+/* CTA buttons */
+.cta {
+  background-image: -webkit-gradient(linear, left top, right top, from(#9d228a), color-stop(20%, #d62678), color-stop(43%, #eb7099), to(#f8a7a7));
+  background-image: linear-gradient(to right, #9d228a 0%, #d62678 20%, #eb7099 43%, #f8a7a7 100%);
+  border-radius: 12px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  background-size: 200% auto;
+}
+
+.cta:hover {
+  background-position: right center;
+}
+
+a i:hover {
+  color: #eb7099;
+  text-shadow: 0 0 20px #eb7099;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
