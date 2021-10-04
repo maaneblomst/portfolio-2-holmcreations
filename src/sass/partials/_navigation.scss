@@ -1,0 +1,17 @@
+/* Sidenav */
+.sidenav {
+  background-color: rgba(66, 65, 65, 0.7);
+  -webkit-backdrop-filter: brightness(60%) blur(3px);
+  backdrop-filter: brightness(60%) blur(3px);
+}
+
+.sidenav a {
+  text-decoration: none;
+  font-size: 36px;
+  color: #fff;
+}
+
+nav.navbar {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
