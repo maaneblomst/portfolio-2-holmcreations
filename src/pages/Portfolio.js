@@ -1,5 +1,6 @@
 import HeroSection from "../components/layout/HeroSection";
 import Footer from "../components/layout/Footer";
+import { PortfolioItems } from "../components/portfolio/PortfolioList";
 
 export default function Portfolio() {
   return (
@@ -13,7 +14,9 @@ export default function Portfolio() {
           link="#"
         />
       </div>
-      <main className="content-wrapper"></main>
+      <main className="content-wrapper">
+        <PortfolioItems />
+      </main>
       <Footer />
     </>
   );

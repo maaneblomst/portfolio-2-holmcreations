@@ -6,6 +6,7 @@ import Home from "../../pages/Home";
 import Portfolio from "../../pages/Portfolio";
 import About from "../../pages/About";
 import Contact from "../../pages/Contact";
+import PortfolioItem from "../portfolio/PortfolioItem";
 
 function Routes() {
   return (
@@ -19,7 +20,9 @@ function Routes() {
           <Route exact path="/portfolio">
             <Portfolio />
           </Route>
-          <Route exact path="/portfolio/:id"></Route>
+          <Route exact path="/portfolio/:id">
+            <PortfolioItem />
+          </Route>
           <Route exact path="/about">
             <About />
           </Route>
