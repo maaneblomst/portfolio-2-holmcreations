@@ -10,6 +10,7 @@ export default function Portfolio() {
           title="My Work"
           introText="This is a selection of some of my work from the last two years."
           showButton="d-none"
+          link="#"
         />
       </div>
       <main className="content-wrapper"></main>

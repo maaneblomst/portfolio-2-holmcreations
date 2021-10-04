@@ -15,7 +15,7 @@ function HeroSection({
       <Heading
         size={size}
         content={title}
-        display=" display-2 text-center fw-bold pe-4 ps-4"
+        display=" display-2 text-center fw-bold pe-4 ps-4 pt-5 mt-5"
       />
       <p className="text-white lead text-center">{introText}</p>
       <div className={showButton}>

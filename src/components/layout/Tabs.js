@@ -2,30 +2,30 @@ import Nav from "react-bootstrap/Nav";
 import { QuickFacts, Skills, Experience } from "../content/About";
 import { Tab, Row, Col } from "react-bootstrap";
 
-export default function Tabs() {
+export default function Tabs({ titleOne, titleTwo, titleThree }) {
   return (
     <Tab.Container defaultActiveKey="first">
       <Row>
-        <Nav className="d-flex" variant="tabs">
-          <Col>
+        <Nav className="d-flex p-5 border-0 text-center" variant="tabs">
+          <Col sm={12} md={4} lg={4}>
             <Nav.Item>
-              <Nav.Link eventKey="first">Tab 1</Nav.Link>
+              <Nav.Link eventKey="first">{titleOne}</Nav.Link>
             </Nav.Item>
           </Col>
-          <Col>
+          <Col sm={12} md={4} lg={4}>
             <Nav.Item>
-              <Nav.Link eventKey="second">Tab 2</Nav.Link>
+              <Nav.Link eventKey="second">{titleTwo}</Nav.Link>
             </Nav.Item>
           </Col>
-          <Col>
+          <Col sm={12} md={4} lg={4}>
             <Nav.Item>
-              <Nav.Link eventKey="third">Tab 3</Nav.Link>
+              <Nav.Link eventKey="third">{titleThree}</Nav.Link>
             </Nav.Item>
           </Col>
         </Nav>
       </Row>
       <Row>
-        <Col sm={9}>
+        <Col sm={12}>
           <Tab.Content>
             <Tab.Pane eventKey="first">
               <QuickFacts />

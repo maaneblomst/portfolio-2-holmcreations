@@ -10,6 +10,7 @@ export default function Contact() {
           title="Let's talk"
           introText="Please get in touch if you have any questions, or want to have a chat – no strings attached."
           showButton="d-none"
+          link="#"
         />
       </div>
       <main className="content-wrapper"></main>
