@@ -7,3 +7,10 @@
 }
 
 $font-family-base: "Raleway", sans-serif;
+
+.menu a {
+  letter-spacing: 1px;
+  :hover {
+    text-decoration: underline;
+  }
+}
