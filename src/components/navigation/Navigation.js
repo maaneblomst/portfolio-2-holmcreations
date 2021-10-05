@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import logo from "../../images/logo-bg-dark.svg";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
-import logo from "../../images/logo-bg-dark.svg";
+import Col from "react-bootstrap/Col";
+import { FiGithub, FiInstagram, FiMail } from "react-icons/fi";
 
 function Navigation() {
   const [show, setShow] = useState(false);
@@ -14,7 +17,7 @@ function Navigation() {
   const toggleShow = () => setShow((s) => !s);
 
   return (
-    <Navbar collapseOnSelect className="fixed-top bg-transparent" expand="xl">
+    <Navbar collapseOnSelect className="fixed-top bg-transparent" expand="xxl">
       <Container>
         <Link to="/">
           <Navbar.Brand>
@@ -77,20 +80,32 @@ function Navigation() {
                   as={Link}
                   to="/about"
                 >
-                  About
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link
-                  onClick={handleClose}
-                  eventKey="4"
-                  as={Link}
-                  to="/contact"
-                >
-                  Contact
+                  My Story
                 </Nav.Link>
               </Nav.Item>
             </Nav>
+            <Row className="contact-icons p-5">
+              <Col sm={4}>
+                <a href="https://www.github.com/maaneblomst">
+                  <FiGithub aria-label="github-link" />
+                </a>
+              </Col>
+              <Col sm={4}>
+                <a href="https://www.instagram.com/tonje__/">
+                  <FiInstagram aria-label="instagram-link" />
+                </a>
+              </Col>
+              <Col sm={4}>
+                <a href="mailto:tonjeth@hotmail.com">
+                  <FiMail aria-label="mail-link" />
+                </a>
+              </Col>
+            </Row>
+            <Row>
+              <p className="fs-1 fw-bold text-primary text-opacity-75">
+                Let's talk!
+              </p>
+            </Row>
           </Offcanvas.Body>
         </Offcanvas>
       </Container>

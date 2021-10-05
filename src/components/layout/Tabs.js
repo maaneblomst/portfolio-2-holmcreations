@@ -1,5 +1,7 @@
 import Nav from "react-bootstrap/Nav";
-import { QuickFacts, Skills, Experience } from "../content/About";
+import QuickFacts from "../content/about/Personalia";
+import { Skills } from "../content/about/Skills";
+import Experience from "../content/about/Experience";
 import { Tab, Row, Col } from "react-bootstrap";
 
 export default function Tabs({ titleOne, titleTwo, titleThree }) {
