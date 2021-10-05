@@ -52,6 +52,7 @@ export default function PortfolioItem() {
   const coverImage = item.coverImage.url === null ? "" : item.coverImage.url;
   const category = item.category;
   let frameworks = _.keys(_.pickBy(item.frameworks));
+  // eslint-disable-next-line
   let filterFrameworks = _.remove(frameworks, function (f) {
     return f === "id";
   });

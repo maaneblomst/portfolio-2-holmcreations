@@ -24,7 +24,7 @@ function HeroSectionPortfolio({
         <a
           href={link}
           target="_blank"
-          rel="noreferer noopener"
+          rel="noreferrer noopener"
           className="btn btn-lg text-white cta ps-5 pe-5 pt-2 pb-2 border-0"
         >
           {buttonTitle}

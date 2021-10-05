@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./sass/custom.scss";
 import Routes from "../src/components/navigation/Routes";
 
