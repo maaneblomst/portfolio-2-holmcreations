@@ -1,6 +1,7 @@
 import HeroSection from "../components/layout/HeroSection";
 import Footer from "../components/layout/Footer";
 import { PortfolioItems } from "../components/portfolio/PortfolioList";
+import Row from "react-bootstrap/Row";
 
 export default function Portfolio() {
   return (
@@ -15,7 +16,9 @@ export default function Portfolio() {
         />
       </div>
       <main className="content-wrapper">
-        <PortfolioItems />
+        <Row>
+          <PortfolioItems />
+        </Row>
       </main>
       <Footer />
     </>

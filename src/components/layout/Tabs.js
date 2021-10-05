@@ -9,17 +9,17 @@ export default function Tabs({ titleOne, titleTwo, titleThree }) {
     <Tab.Container defaultActiveKey="first">
       <Row>
         <Nav className="d-flex p-5 border-0 text-center" variant="tabs">
-          <Col sm={12} md={4} lg={4}>
+          <Col xs={12} md={4}>
             <Nav.Item>
               <Nav.Link eventKey="first">{titleOne}</Nav.Link>
             </Nav.Item>
           </Col>
-          <Col sm={12} md={4} lg={4}>
+          <Col xs={12} md={4}>
             <Nav.Item>
               <Nav.Link eventKey="second">{titleTwo}</Nav.Link>
             </Nav.Item>
           </Col>
-          <Col sm={12} md={4} lg={4}>
+          <Col xs={12} md={4}>
             <Nav.Item>
               <Nav.Link eventKey="third">{titleThree}</Nav.Link>
             </Nav.Item>

@@ -14,37 +14,37 @@ import {
 export default function QuickFacts() {
   return (
     <Row>
-      <Col className="text-center">
+      <Col sm={12} md={4} className="text-center">
         <FiImage size={70} />
         <p>Portrait</p>
       </Col>
-      <Col>
+      <Col sm={12} md={8}>
         <Container>
           <Heading size="4" content="Quick Facts:" />
           <ListGroup variant="flush">
             <ListGroup.Item>
               <p>
-                <FiUser />
+                <FiUser size={20} />
                 <span className="fw-bold p-1">Name:</span> Tonje Holm
               </p>
             </ListGroup.Item>
             <ListGroup.Item>
               <p>
-                <FiRefreshCcw />
+                <FiRefreshCcw size={20} />
                 <span className="fw-bold p-1">Age:</span> 28
               </p>
             </ListGroup.Item>
             <ListGroup.Item>
               <p>
-                <FiMapPin />
+                <FiMapPin size={20} />
                 <span className="fw-bold p-1">Location:</span> Oslo-Area
               </p>
             </ListGroup.Item>
             <ListGroup.Item>
               <p>
-                <FiHeart />
-                <span className="fw-bold p-1">Interests:</span>Dogs ( 🐾 Lumi,
-                Australian Sheperd), Beauty, Technology, Cooking, Design
+                <FiHeart size={20} />
+                <span className="fw-bold p-1">Interests:</span>Dogs ( 🐾 Lumi),
+                Beauty, Technology, Cooking, Design
               </p>
             </ListGroup.Item>
           </ListGroup>

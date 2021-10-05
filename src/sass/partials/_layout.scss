@@ -5,3 +5,16 @@ body {
 .content-wrapper {
   padding: 3em;
 }
+
+footer {
+  padding: 7em 0;
+}
+.portfolio-item {
+  transition: 0.5 s ease-in-out;
+}
+
+.portfolio-item:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+  transition: 0.5 s ease-in-out;
+}
