@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "../../constants/Api";
 import axios from "axios";
+import moment from "moment";
 import _ from "lodash";
 import Heading from "../Heading";
 import Row from "react-bootstrap/Row";
@@ -9,9 +10,8 @@ import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
-import HeroSection from "../layout/HeroSection";
+import HeroSectionPortfolio from "../layout/HeroSectionPortfolio";
 import { FiCalendar, FiClipboard, FiEdit2, FiTool } from "react-icons/fi";
-import { ListGroup } from "react-bootstrap";
 
 export default function PortfolioItem() {
   const [item, setItem] = useState(null);
@@ -56,6 +56,11 @@ export default function PortfolioItem() {
     return f === "id";
   });
 
+  function dateFormatter() {
+    let formattedDate = moment(date).format("MMM YYYY");
+    return formattedDate;
+  }
+
   return (
     <>
       <div
@@ -63,7 +68,7 @@ export default function PortfolioItem() {
         style={{ backgroundImage: `url(${coverImage})` }}
         className="hero-image-portfolio-item"
       >
-        <HeroSection
+        <HeroSectionPortfolio
           title={title}
           size="1"
           introText={intro}
@@ -82,7 +87,7 @@ export default function PortfolioItem() {
           <Col>
             <Container>
               <Heading size="2" content="When" />
-              <p>{date}</p>
+              <p className="fw-bold">{dateFormatter(date)}</p>
             </Container>
           </Col>
         </Row>
@@ -134,19 +139,23 @@ export default function PortfolioItem() {
           </Col>
         </Row>
         <Row>
-          <Container>
-            <Carousel>
-              {item.galleryFinished.map((image) => (
-                <Carousel.Item key={image.url} align="center">
-                  <Image
-                    className="d-block w-100 rounded"
-                    src={image.url}
-                    alt={image.alternativeText}
-                  />
-                </Carousel.Item>
-              ))}
-            </Carousel>
-          </Container>
+          <Col />
+          <Col sm={12} md={8}>
+            <Container>
+              <Carousel>
+                {item.galleryFinished.map((image) => (
+                  <Carousel.Item key={image.url} align="center">
+                    <Image
+                      className="d-block w-100 rounded"
+                      src={image.url}
+                      alt={image.alternativeText}
+                    />
+                  </Carousel.Item>
+                ))}
+              </Carousel>
+            </Container>
+          </Col>
+          <Col />
         </Row>
       </main>
     </>
