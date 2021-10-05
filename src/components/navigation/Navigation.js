@@ -10,9 +10,8 @@ import Image from "react-bootstrap/Image";
 import Col from "react-bootstrap/Col";
 import { FiGithub, FiInstagram, FiMail } from "react-icons/fi";
 
-function Navigation() {
+export default function Navigation() {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
 
@@ -112,5 +111,3 @@ function Navigation() {
     </Navbar>
   );
 }
-
-export default Navigation;
