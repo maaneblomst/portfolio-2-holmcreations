@@ -16,7 +16,7 @@ export default function Navigation() {
   const toggleShow = () => setShow((s) => !s);
 
   return (
-    <Navbar collapseOnSelect className="fixed-top bg-transparent" expand="xxl">
+    <Navbar collapseOnSelect className="fixed-top bg-transparent" expand="true">
       <Container>
         <Link to="/">
           <Navbar.Brand>
