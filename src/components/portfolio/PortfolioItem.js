@@ -49,7 +49,7 @@ export default function PortfolioItem() {
   const intro = item.intro;
   const assignment = item.assignment;
   const desc = item.description;
-  const coverImage = item.coverImage.url;
+  const coverImage = item.coverImage.url === null ? "" : item.coverImage.url;
   const category = item.category;
   let frameworks = _.keys(_.pickBy(item.frameworks));
   let filterFrameworks = _.remove(frameworks, function (f) {
