@@ -2,12 +2,16 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "../../constants/Api";
 import axios from "axios";
+import _ from "lodash";
 import Heading from "../Heading";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
+import Carousel from "react-bootstrap/Carousel";
+import Image from "react-bootstrap/Image";
 import HeroSection from "../layout/HeroSection";
 import { FiCalendar, FiClipboard, FiEdit2, FiTool } from "react-icons/fi";
+import { ListGroup } from "react-bootstrap";
 
 export default function PortfolioItem() {
   const [item, setItem] = useState(null);
@@ -47,6 +51,10 @@ export default function PortfolioItem() {
   const desc = item.description;
   const coverImage = item.coverImage.url;
   const category = item.category;
+  let frameworks = _.keys(_.pickBy(item.frameworks));
+  let filterFrameworks = _.remove(frameworks, function (f) {
+    return f === "id";
+  });
 
   return (
     <>
@@ -109,7 +117,7 @@ export default function PortfolioItem() {
             </Container>
           </Col>
         </Row>
-        <Row>
+        <Row className="mb-5">
           <Col sm={0} md={2} />
           <Col sm={12} md={2}>
             <Container className="text-center mt-2">
@@ -119,9 +127,26 @@ export default function PortfolioItem() {
           <Col>
             <Container>
               <Heading size="2" content="Tools" />
-              <p>Frameworks</p>
+              {frameworks.map((value, key) => (
+                <Container key={key}>{value}</Container>
+              ))}
             </Container>
           </Col>
+        </Row>
+        <Row>
+          <Container>
+            <Carousel>
+              {item.galleryFinished.map((image) => (
+                <Carousel.Item key={image.url} align="center">
+                  <Image
+                    className="d-block w-100 rounded"
+                    src={image.url}
+                    alt={image.alternativeText}
+                  />
+                </Carousel.Item>
+              ))}
+            </Carousel>
+          </Container>
         </Row>
       </main>
     </>
