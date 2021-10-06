@@ -12,6 +12,8 @@ import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
 import HeroSectionPortfolio from "../layout/HeroSectionPortfolio";
 import { FiCalendar, FiClipboard, FiEdit2, FiTool } from "react-icons/fi";
+import Loading from "../loading/Loading";
+import Error from "../error/Error";
 
 export default function PortfolioItem() {
   const [item, setItem] = useState(null);
@@ -39,8 +41,22 @@ export default function PortfolioItem() {
     // eslint-disable-next-line
   }, []);
 
-  if (loading) return <Container>Loading</Container>;
-  if (loadError) return <Container>Error: {loadError}</Container>;
+  if (loading)
+    return (
+      <Container className="d-flex mt-5 p-5  justify-content-center">
+        <Loading animation="border" variant="primary" />
+      </Container>
+    );
+  if (loadError)
+    return (
+      <Container className="d-flex mt-5 p-5 justify-content-center">
+        <Error
+          variant="danger"
+          displayText="Sorry! Something went wrong.."
+          error={loadError}
+        />
+      </Container>
+    );
 
   const title = item.title;
   const siteUrl = item.url;

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../../images/logo-bg-dark.svg";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
@@ -12,11 +12,24 @@ import { FiGithub, FiInstagram, FiMail } from "react-icons/fi";
 
 export default function Navigation() {
   const [show, setShow] = useState(false);
+  const [headerShow, setHeaderShow] = useState(false);
   const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () =>
+        setHeaderShow(window.pageYOffset > 500)
+      );
+    }
+  }, []);
+
   return (
-    <Navbar collapseOnSelect className="fixed-top bg-transparent" expand="true">
+    <Navbar
+      collapseOnSelect
+      className={headerShow ? "fixed-top bg-dark" : "fixed-top bg-transparent"}
+      expand="true"
+    >
       <Container>
         <Link to="/">
           <Navbar.Brand>
