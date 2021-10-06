@@ -21,7 +21,7 @@ export default function Home() {
       </div>
       <main className="content-wrapper">
         <Row>
-          <Col>
+          <Col sm={12} md={6}>
             <Container className="text-center mt-5">
               <span className="display-1 lh-1 text-primary">Create</span>
               <br />
@@ -36,8 +36,8 @@ export default function Home() {
               </Container>
             </Container>
           </Col>
-          <Col>
-            <Image src={image} />
+          <Col sm={12} md={6}>
+            <Image fluid src={image} />
           </Col>
         </Row>
       </main>
