@@ -36,7 +36,8 @@
 /* Switch background-image to scroll on smaller screens (mobile doesnt handle parallax very well */
 
 @media only screen and (max-device-width: 999px) {
-  .hero-image-home .hero-image-portfolio,
+  .hero-image-home,
+  .hero-image-portfolio,
   .hero-image-about,
   .hero-image-portfolio-item {
     background-attachment: scroll;
