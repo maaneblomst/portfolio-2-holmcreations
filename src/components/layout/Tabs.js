@@ -4,24 +4,43 @@ import { Skills } from "../content/about/Skills";
 import Experience from "../content/about/Experience";
 import { Tab, Row, Col } from "react-bootstrap";
 
-export default function Tabs({ titleOne, titleTwo, titleThree }) {
+export default function Tabs({
+  iconOne,
+  titleOne,
+  iconTwo,
+  titleTwo,
+  iconThree,
+  titleThree,
+}) {
   return (
     <Tab.Container defaultActiveKey="first">
       <Row>
         <Nav className="d-flex p-5 border-0 text-center" variant="tabs">
           <Col xs={12} md={4}>
-            <Nav.Item>
-              <Nav.Link eventKey="first">{titleOne}</Nav.Link>
+            <Nav.Item className="p-1">
+              <Nav.Link eventKey="first">
+                {iconOne}
+                <br />
+                {titleOne}
+              </Nav.Link>
+            </Nav.Item>
+          </Col>
+          <Col xs={12} md={4}>
+            <Nav.Item className="p-1">
+              <Nav.Link eventKey="second">
+                {iconTwo}
+                <br />
+                {titleTwo}
+              </Nav.Link>
             </Nav.Item>
           </Col>
           <Col xs={12} md={4}>
             <Nav.Item>
-              <Nav.Link eventKey="second">{titleTwo}</Nav.Link>
-            </Nav.Item>
-          </Col>
-          <Col xs={12} md={4}>
-            <Nav.Item>
-              <Nav.Link eventKey="third">{titleThree}</Nav.Link>
+              <Nav.Link eventKey="third">
+                {iconThree}
+                <br />
+                {titleThree}
+              </Nav.Link>
             </Nav.Item>
           </Col>
         </Nav>

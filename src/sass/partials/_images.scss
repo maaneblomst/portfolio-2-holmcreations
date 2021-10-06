@@ -25,8 +25,7 @@
   background-size: cover;
 }
 
-.hero-image-contact {
-  background-image: url("../../images/contact/contact-hero-image.jpg");
+.hero-image-portfolio-item {
   height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -34,10 +33,12 @@
   background-size: cover;
 }
 
-.hero-image-portfolio-item {
-  height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+/* Switch background-image to scroll on smaller screens (mobile doesnt handle parallax very well */
+
+@media only screen and (max-device-width: 999px) {
+  .hero-image-home .hero-image-portfolio,
+  .hero-image-about,
+  .hero-image-portfolio-item {
+    background-attachment: scroll;
+  }
 }

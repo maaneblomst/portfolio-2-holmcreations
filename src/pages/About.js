@@ -21,9 +21,12 @@ export default function About() {
       </div>
       <main className="content-wrapper">
         <Tabs
-          titleOne={userIcon}
-          titleTwo={skillsIcon}
-          titleThree={experienceIcon}
+          iconOne={userIcon}
+          titleOne="About"
+          iconTwo={skillsIcon}
+          titleTwo="Skills"
+          iconThree={experienceIcon}
+          titleThree="Experience"
         />
       </main>
       <Footer />
